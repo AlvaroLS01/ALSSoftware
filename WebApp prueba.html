@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<!-- Enlaces a bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+		<link rel="stylesheet" href="estilo.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+		<style type="text/css">
+
+		body {
+			margin-left: 10px;
+		}
+
+		form, 
+		#resultadoBusqueda {
+			display: none;
+		}
+		
+		#formularios {
+			margin-top: 60px;
+		}
+	</style>
+	<title>ALSOFTWARE</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md text-nowrap mb-3 fixed-top shadow">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="Home.html">
+				<img src="img/ALSoftwareLogo.png" alt="Inicio">
+			</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Proyectos
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#" id="mnuAltaProyecto">Alta Proyecto</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+
+						<li><a class="dropdown-item" href="#" id="mnuBuscarProyecto">Buscar Proyecto Existente</a></li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Tareas
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#" id="mnuAltaTarea">Añadir Tarea</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#" id="mnuBuscarTarea">Buscar Tarea Existente</a></li>
+						<li><a class="dropdown-item" href="#" id="mnuListadoTareas">Listado de Tareas</a></li>
+					</ul>
+				</li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	
+
+		<div class="container" id="formularios">
+			<div class="row">
+	
+				
+	
+				
+	
+				<!-- Formulario Modificar Proyecto -->
+				<form class="form-horizontal" name="frmModificarProyecto" id="frmModificarProyecto">
+					<legend>Modificar proyecto</legend>
+					<div class="form-group">
+						<label class="col-xs-4 control-label" for="txtModIdProyecto">Id Proyecto</label>
+						<div class="col-xs-4">
+							<input disabled id="txtModIdProyecto" name="txtModIdProyecto" class="form-control input-md"
+								type="text">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-xs-4 control-label" for="txtNombreProyecto">Nombre del proyecto</label>
+						<div class="col-xs-4">
+							<input id="txtNombreProyecto" name="txtNombreProyecto" class="form-control input-md"
+								type="text">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-xs-4 control-label" for="txtModFechaInicio">Fecha de inicio</label>
+						<div class="col-xs-4">
+							<input id="txtModFechaInicio" name="txtModFechaInicio" class="form-control input-md"
+								type="date">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-xs-4 control-label" for="txtModFechaFin">Fecha de fin</label>
+						<div class="col-xs-4">
+							<input id="txtModFechaFin" name="txtModFechaFin" class="form-control input-md" type="date">
+						</div>
+					</div>
+					<label class="col-xs-4 control-label" for="txtNombreProyecto">Nombre del proyecto</label>
+					<div class="col-xs-4">
+						<input id="txtNombreProyecto" name="txtNombreProyecto" class="form-control input-md"
+							type="text">
+					<div class="form-group">
+						<label class="col-xs-4 control-label" for="btnAceptarModProyecto"></label>
+						<div class="col-xs-4">
+							<input type="button" id="btnAceptarModProyecto" name="btnAceptarModProyecto"
+								class="btn btn-primary" value="Aceptar" />
+						</div>
+					</div>
+				</form> 
+	
+				
+    <div class="container" id="resultadoBusqueda"></div>
+    <div class="container" id="listados"></div>
+
+	<script type="text/javascript" src="js/objetos.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    
+	<script type="text/javascript" src="js/intento.js"></script>
+</body>
+
+</html>
