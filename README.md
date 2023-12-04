@@ -1,2 +1,0 @@
-# ALSSoftware
-Trabajo de DIW
